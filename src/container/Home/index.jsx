@@ -21,12 +21,12 @@ export default function Home() {
   let datas = 'Vì Cậu đẹp trai dễ thương nạ ';
   const [value, setValue] = useState([]);
 
-  async function handleFirstClick() {
+   function handleFirstClick() {
     let audio = new Audio();
     audio.src = AudioFirstClick;
     audio.play();
-    await setIsShow(!isShow);
-    await setIsShowButtonInfor(!isShowButtonInfor);
+    setIsShow(!isShow);
+    setIsShowButtonInfor(!isShowButtonInfor);
   }
 
   function handleHover(item) {
@@ -42,8 +42,8 @@ export default function Home() {
     audio.src = AudioHover;
     audio.play();
   }
-  async function handleOpenConfirm() {
-    await setIsShowButtonConfirm(!isShowButtonConfirm);
+  function handleOpenConfirm() {
+    setIsShowButtonConfirm(!isShowButtonConfirm);
 
     let audio = new Audio();
     audio.src = AudioSelect;
@@ -58,9 +58,9 @@ export default function Home() {
 
     setValue(sliceData);
   }
-  async function handleOpenFinal() {
-    await setIsShowButtonFinal(!isShowButtonFinal);
-    await setIsShowButtonConfirm(false);
+  function handleOpenFinal() {
+    setIsShowButtonFinal(!isShowButtonFinal);
+     setIsShowButtonConfirm(false);
     let audio = new Audio();
     audio.src = AudioSelect;
     audio.play();
