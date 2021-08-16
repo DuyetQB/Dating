@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-
+import {media} from 'styles/breakpoints';
 
 export const Backdrop = styled.div`
 position: fixed;
@@ -22,4 +22,7 @@ width:50%;
 height:50%;
 border-radius:15px;
 padding:30px;
+${media.phone`
+    width:80%;
+    `}
 `;

@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-
+import {media} from 'styles/breakpoints';
 export const Wrapper = styled.div`
  display: flex;
  flex-direction: column;
@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     css`
       background: url(${$bg});
     `};
+
+    ${media.phone`
+    width:100%;
+    `}
 `;
 
 

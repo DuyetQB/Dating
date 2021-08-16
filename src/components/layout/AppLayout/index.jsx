@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {media} from 'styles/breakpoints';
 import MainBg from 'images/main-background.jpg';
 
 export default function AppLayout({children}) {
@@ -12,6 +12,9 @@ export default function AppLayout({children}) {
     height: 100vh;
     background: url(${MainBg});
     background-size: cover;
+    ${media.phone`
+    width:100%;
+    `}
   `;
   return (
     <Applayout>
