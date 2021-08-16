@@ -30,8 +30,10 @@ export default function Home() {
   }
 
   function handleHover(item) {
-   
-   
+    let audio = new Audio();
+    audio.src = AudioHover;
+    audio.play();
+
     let numbers = 840;
     let number2 = 520;
     
@@ -42,18 +44,16 @@ export default function Home() {
     item.target.style.left = indexLeft + 'px';
     item.target.style.top = indexRight + 'px';
 
-    let audio = new Audio();
-    audio.src = AudioHover;
-    audio.play();
+   
 
     
   }
   function handleOpenConfirm() {
+      
+          let audio = new Audio();
+          audio.src = AudioSelect;
+          audio.play();
     setIsShowButtonConfirm(!isShowButtonConfirm);
-
-    let audio = new Audio();
-    audio.src = AudioSelect;
-    audio.play();
   }
   function handleValue(e) {
     e.target.value = datas;
@@ -65,11 +65,11 @@ export default function Home() {
     setValue(sliceData);
   }
   function handleOpenFinal() {
+      let audio = new Audio();
+      audio.src = AudioSelect;
+      audio.play();
     setIsShowButtonFinal(!isShowButtonFinal);
      setIsShowButtonConfirm(false);
-    let audio = new Audio();
-    audio.src = AudioSelect;
-    audio.play();
   }
   async function handleCloseFinal() {
     await setIsShowButtonFinal(!isShowButtonFinal);
