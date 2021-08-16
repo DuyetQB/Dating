@@ -30,15 +30,12 @@ export default function Home() {
   }
 
   function handleHover(item) {
-    var x = window.matchMedia("(max-width: 700px)");
+   
    
     let numbers = 840;
     let number2 = 520;
-    if(x.matches){
-        numbers = 130;
-        number2 = 140;
-    }
-    else{return;}
+    
+    
     let indexLeft = Math.floor(Math.random() * numbers);
 
     let indexRight = Math.floor(Math.random() * number2);
